@@ -1,4 +1,4 @@
-CREATE TABLE tb_scheduling (
+CREATE TABLE tb_schedules (
     id SERIAL PRIMARY KEY,
     title VARCHAR(120) NOT NULL,
     description TEXT,

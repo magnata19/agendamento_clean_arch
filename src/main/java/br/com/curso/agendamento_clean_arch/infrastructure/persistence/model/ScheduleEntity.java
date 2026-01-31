@@ -2,10 +2,7 @@ package br.com.curso.agendamento_clean_arch.infrastructure.persistence.model;
 
 import br.com.curso.agendamento_clean_arch.core.enums.ScheduleStatus;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.time.LocalDateTime;
 
@@ -15,6 +12,7 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "tb_schedules")
+@Builder
 public class ScheduleEntity {
 
     @Id

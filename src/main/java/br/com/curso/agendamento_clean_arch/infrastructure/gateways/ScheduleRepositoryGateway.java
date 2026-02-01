@@ -6,18 +6,18 @@ import br.com.curso.agendamento_clean_arch.core.gateway.ScheduleGateway;
 import br.com.curso.agendamento_clean_arch.infrastructure.mappers.ScheduleEntityMapper;
 import br.com.curso.agendamento_clean_arch.infrastructure.persistence.model.ScheduleEntity;
 import br.com.curso.agendamento_clean_arch.infrastructure.persistence.repository.ScheduleRepository;
-import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Component;
 
 import java.time.LocalDateTime;
-import java.util.Optional;
 
-@Component
-@RequiredArgsConstructor
 public class ScheduleRepositoryGateway implements ScheduleGateway {
 
     private final ScheduleRepository scheduleRepository;
     private final ScheduleEntityMapper entityMapper;
+
+    public ScheduleRepositoryGateway(ScheduleRepository scheduleRepository, ScheduleEntityMapper entityMapper) {
+        this.scheduleRepository = scheduleRepository;
+        this.entityMapper = entityMapper;
+    }
 
     @Override
     public Schedule create(Schedule schedule) {

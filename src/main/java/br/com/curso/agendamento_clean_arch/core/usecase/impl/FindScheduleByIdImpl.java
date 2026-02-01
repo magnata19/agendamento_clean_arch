@@ -2,9 +2,9 @@ package br.com.curso.agendamento_clean_arch.core.usecase.impl;
 
 import br.com.curso.agendamento_clean_arch.core.entities.Schedule;
 import br.com.curso.agendamento_clean_arch.core.gateway.ScheduleGateway;
-import br.com.curso.agendamento_clean_arch.core.usecase.contracts.FindScheduleById;
+import br.com.curso.agendamento_clean_arch.core.usecase.contracts.FindScheduleByIdUseCase;
 
-public class FindScheduleByIdImpl implements FindScheduleById {
+public class FindScheduleByIdImpl implements FindScheduleByIdUseCase {
 
     private final ScheduleGateway scheduleGateway;
 
